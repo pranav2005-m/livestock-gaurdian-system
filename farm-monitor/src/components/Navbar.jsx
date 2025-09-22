@@ -61,10 +61,10 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             {/* Navigation Links */}
             <div className="flex items-center gap-2">
-              <Link to="/home" className={getNavItemClass("/")}>
+              <Link to="/" className={getNavItemClass("/")}>
                 <span className="text-xl">🏠</span>
                 Home
-                {isActivePage("/home") && (
+                {isActivePage("/") && (
                   <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full"></div>
                 )}
               </Link>
@@ -77,10 +77,7 @@ export default function Navbar() {
                 )}
               </Link>
 
-              <Link
-                to="/add-animal"
-                className={getNavItemClass("/add-animal")}
-              >
+              <Link to="/add-animal" className={getNavItemClass("/add-animal")}>
                 <span className="text-xl">➕</span>
                 Add Animal
                 {isActivePage("/add-animal") && (
@@ -139,9 +136,9 @@ export default function Navbar() {
 
               {/* Mobile Navigation Links */}
               <Link
-                to="/home"
+                to="/"
                 onClick={() => setIsMenuOpen(false)}
-                className={`${getNavItemClass("/home")} w-full justify-start text-lg`}
+                className={`${getNavItemClass("/")} w-full justify-start text-lg`}
               >
                 <span className="text-xl">🏠</span>
                 Home
