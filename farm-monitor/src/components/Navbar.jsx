@@ -61,7 +61,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             {/* Navigation Links */}
             <div className="flex items-center gap-2">
-              <Link to="/home" className={getNavItemClass("/home")}>
+              <Link to="/home" className={getNavItemClass("/")}>
                 <span className="text-xl">🏠</span>
                 Home
                 {isActivePage("/home") && (
